@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>CoderDojo HTML/CSS/Javascript</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>CoderDojo</h1>
+          <h2>HTML/CSS/Javascript</h2>
+          <small> 15.11.2021 </small>
+        </section>
+
+        <section>
+          <h1>Some tools to use</h1>
+          <ul>
+            <li>
+              A texteditor on your computer
+              <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+            </li>
+            <li>
+              Online editors example
+              <a href="https://codepen.io/pen">CodePen</a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gT0Lh1eYk78"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+          <small>
+            HTML, CSS, JavaScript Explained [in 4 minutes for beginners]
+          </small>
+        </section>
+
+        <section>
+          <p>HTML, CSS, JavaScript are totally different languanges.</p>
+          <p>Just like, Swedish Finnsih or Norwegian</p>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+			## HTML, The builder.
+			### Stands for
+			Hypertext Markup Languange
+			### Examples we learned today:
+							<body></body>
+							<a href="mylink.html">A link</a>
+							<h1>A heading</h1>
+							<p>A paragraph with text.</p>
+							<img src="hello.jpg" alt="Hello there">
+        </textarea
+          >
+        </section>
+
+        <section>
+          <small>
+            Every valid
+            <a href="https://htmldog.com/references/html/tags/">HTML tag</a>
+            that exists and how to use it:
+          </small>
+
+          <iframe
+            width="1024"
+            height="600"
+            src="https://htmldog.com/references/html/tags/"
+            title="All valid HTML5 tags that exist"
+            style="background-color: white"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### All tags starts like:
+	< 
+            ### and ends like this:
+	>
+	or
+	/>
+            ---
+            ## Compare theese examples, which tag is standalone?
+			
+	<p>A paragraph with text.</p>
+	<img src="hello.jpg" alt="Hello there">
+	<img src="hello.jpg" alt="Hello there" />
+        </textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+		## CSS
+		### or
+		Cascading Style Sheets
+		### or 
+		The Artist
+		The Furniture
+		The Paint
+		---
+		### Starts like:
+	element {
+		
+### Ends like:
+	}
+					
+		### Last char if more than one property:
+			;				
+							
+			</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+			  Starts like this:
+    ```css [1|2]
+		something {
+		}
+    ```
+  </textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+			  Properties must end like this (if more that one property):
+    ```css [1]
+		; 
+    ```
+  </textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+			  Example of propertis and values
+    ```css [1|2-4|5]
+		body { background-color: black; }
+		a { color: yellow; }
+		h1 { color: orange; }
+		p { color: white; }
+		img { width: 100%; }
+    ```
+  </textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Javascript
+            TODO
+            ---
+            ## TODO Slide 2
+            ---
+            ## TODO Slide 3
+        </textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+    ```js [1-2|3|4]
+    let a = 1;
+    let b = 2;
+    let c = x => 1 + 2 + x;
+    c(3);
+    ```
+  </textarea
+          >
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+        // Options which are passed into marked
+        // See https://marked.js.org/#/USING_ADVANCED.md#options
+        markdown: {
+          smartypants: true,
+        },
+      });
+    </script>
+  </body>
+</html>
