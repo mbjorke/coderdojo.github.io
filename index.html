@@ -60,19 +60,9 @@
           <p>Just like, Swedish Finnsih or Norwegian</p>
         </section>
 
-        <section data-markdown>
-          <textarea data-template>
-			## HTML, The builder.
-			### Stands for
-			Hypertext Markup Languange
-			### Examples we learned today:
-							<body></body>
-							<a href="mylink.html">A link</a>
-							<h1>A heading</h1>
-							<p>A paragraph with text.</p>
-							<img src="hello.jpg" alt="Hello there">
-        </textarea
-          >
+        <section>
+          <h1>HTML, The builder.</h1>
+          <h2>= Hypertext Markup Languange</h2>
         </section>
 
         <section>
@@ -89,85 +79,107 @@
             title="All valid HTML5 tags that exist"
             style="background-color: white"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
           >
           </iframe>
         </section>
 
+        <section>
+          <h2>Structure</h2>
+          <p>
+            An HTML tag is made up of the element name followed by an optional
+            list of attributes, all of which appears between angle brackets (<tt
+              class="literal"
+              >&lt; &gt;</tt
+            >). Nothing within the brackets is displayed in the browser.
+          </p>
+        </section>
+
+        <section>
+          <h2>Standalone</h2>
+          <p>
+            A few tags do not have end tags because they are used to place
+            standalone elements in the document or on the page. The image tag
+            (<tt class="literal">&lt;img&gt;</tt>) is such a tag; it simply
+            plops a graphic into the flow of the page. Other standalone tags
+            include the linebreak (<tt class="literal">&lt;br&gt;</tt>),
+            horizontal rule (<tt class="literal">&lt;hr&gt;</tt>).
+          </p>
+        </section>
+
         <section data-markdown>
           <textarea data-template>
-            ### All tags starts like:
-	< 
-            ### and ends like this:
-	>
-	or
-	/>
-            ---
-            ## Compare theese examples, which tag is standalone?
-			
-	<p>A paragraph with text.</p>
-	<img src="hello.jpg" alt="Hello there">
-	<img src="hello.jpg" alt="Hello there" />
-        </textarea
+Compare theese two examples, which tag is standalone?
+```html [1|2]
+<p>A paragraph with text.</p>
+<img src="hello.jpg" alt="Hello there" />
+```
+</textarea
           >
         </section>
 
         <section data-markdown>
           <textarea data-template>
-		## CSS
-		### or
-		Cascading Style Sheets
-		### or 
-		The Artist
-		The Furniture
-		The Paint
-		---
-		### Starts like:
-	element {
-		
-### Ends like:
-	}
-					
-		### Last char if more than one property:
-			;				
-							
-			</textarea
+The head, body and tag, every document should have it. 
+Between head is something called meta information, between body is our page content. 
+```html [1,4|5,8|2-3|6-7]
+<head>
+  <title>A title, typically shown in the browser tab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>A header</h1>
+  <p>Some text<a href="link.html">a link</a></p>
+</body>
+```
+</textarea
           >
         </section>
 
         <section data-markdown>
           <textarea data-template>
-			  Starts like this:
-    ```css [1|2]
-		something {
-		}
-    ```
-  </textarea
+h1 - h6, it is good if every document has a h1 tag. 
+```html [1|2|3|4|5|6]
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
+</textarea
           >
         </section>
 
         <section data-markdown>
           <textarea data-template>
-			  Properties must end like this (if more that one property):
-    ```css [1]
-		; 
-    ```
-  </textarea
+The p tag, should contain a block of text. 
+```html [1|2|3|4]
+<p>A paragraph with text</p>
+```
+</textarea
           >
         </section>
 
         <section data-markdown>
           <textarea data-template>
-			  Example of propertis and values
-    ```css [1|2-4|5]
-		body { background-color: black; }
-		a { color: yellow; }
-		h1 { color: orange; }
-		p { color: white; }
-		img { width: 100%; }
-    ```
-  </textarea
+The a tag is a link somewhere, compare a relative vs an absolute link:
+```html [1|2-3]
+<a href="kitesurf.html">My hobby</a>
+<a href="/kitesurf/">Kitesurf.com</a>
+<a href="http://kitesurf.com">Kitesurf.com</a>
+```
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+The img tag, to display an image. Line 2 with an alt text attribute:
+```html [1|2]
+<img src="myimage.jpg">
+<img src="myimage.jpg" alt="Text describing the image">
+```
+</textarea
           >
         </section>
 
@@ -206,28 +218,302 @@
           ></script>
         </section>
 
+        <section>
+          <h1>CSS</h1>
+          <h2>= Cascading Style Sheets</h2>
+          <p>or</p>
+          <ul>
+            <li>The Artist</li>
+            <li>The Furniture</li>
+            <li>The Paint</li>
+          </ul>
+        </section>
+
         <section data-markdown>
           <textarea data-template>
-            ## Javascript
-            TODO
-            ---
-            ## TODO Slide 2
-            ---
-            ## TODO Slide 3
-        </textarea
+			  Example of propertis and values
+```css [2-4|7,10|13]
+body { 
+  background-color: orange;
+  color: white;
+  text-align: center;
+}
+a { 
+  color: blue; 
+}
+h1 { 
+  color: purple; 
+}
+img { 
+  width: 100%; 
+}
+```
+  </textarea
           >
         </section>
 
         <section data-markdown>
           <textarea data-template>
-    ```js [1-2|3|4]
-    let a = 1;
-    let b = 2;
-    let c = x => 1 + 2 + x;
-    c(3);
-    ```
+			  Properties, on line 3 in this example, have to end with a semicolon (<tt class="literal">&#59;</tt>) because it is more than one property. 
+        Compare thees examples.
+```css [1|2|3]
+img { width: 100% }
+img { width: 100%; }
+img { width: 100%; height: 40px; }
+```
+Line 1 and 2 are both valid, but good practice to always do like on line 2.
   </textarea
           >
+        </section>
+
+        <section>
+          <h1>CoderDojo</h1>
+          <h2>CSS and HTML Continue</h2>
+          <small> 22.11.2021 </small>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+ID vs. class
+```css [1|2]
+#myId { color: red; }
+.myClass { color: blue; }
+```
+HTML
+```html [1|2]
+<p id="myId">My id</p>
+<p class="myClass">My class</p>
+```
+
+  </textarea
+          >
+        </section>
+
+        <section>
+          <p>
+            Our goal for next time is to start and make a quiz game like this:
+          </p>
+          <small
+            >Here you can find the
+            <a href="https://github.com/Linenmyron/quiz"
+              >source code for the game</a
+            ></small
+          >
+          <iframe
+            width="1024"
+            height="600"
+            src="https://linenmyron.github.io/quiz/"
+            title="Quiz game"
+            style="background-color: white"
+            frameborder="0"
+          >
+          </iframe>
+        </section>
+
+        <section>
+          <h2>Lets check the code</h2>
+          <p>What is new code from last lesson?</p>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+Audio tag, with a few different id:s. We will later use theese id:s toghether with JavaScript.
+```html [1|2|3|4]
+  <audio id="right">
+  <audio id="wrong">
+  <audio id="endgamefail">
+  <audio id="endgamesuccess">
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+Audio tag with an id, a nested source tag and type attribute.
+```html [1,6|2|3|4|5]
+<audio 
+  id="endgamesuccess">
+	<source 
+    src="audio/endgamesuccess.mp3" 
+    type="audio/mpeg">
+</audio>
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+You should recognize the h1 and the p tags. A new thing with p is they each have a unique id. 
+Another new tag for you is the div, also with id and classname. The classname we can use for 
+example to style the div with a round border and transparent background-color via CSS.
+```html [2|3,4|1,8]
+<div id="gamebox" class="quizbox">
+	<h1>The Amazing Quiz!</h1>
+	<p id="score"> Score: 0</p>
+	<p id="question">Finlands president?</p> 
+	<button class="buttonClass" id="answer1" onclick="answer(1);">Din mamma</button>
+	<button class="buttonClass" id="answer2" onclick="answer(2);">Sauli Niinistö</button>
+	<button class="buttonClass" id="answer3" onclick="answer(3);">Jag själv</button>
+</div>
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+The buttons might also be a new thing for you. In the example we can also see there are 
+three buttons with same classname but with different id and click functions.
+```html [5-7]
+<div id="gamebox" class="quizbox">
+	<h1>The Amazing Quiz!</h1>
+	<p id="score"> Score: 0</p>
+	<p id="question">Finlands president?</p> 
+	<button class="buttonClass" id="answer1" onclick="answer(1);">Din mamma</button>
+	<button class="buttonClass" id="answer2" onclick="answer(2);">Sauli Niinistö</button>
+	<button class="buttonClass" id="answer3" onclick="answer(3);">Jag själv</button>
+</div>
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+CSS for the div. First we position the div absolutetly to the window, with top and left calculations. 
+Then we make it 400px width and height. Try change any of the values on line 3-6.
+```css [1,11|2-4|5-6]
+.quizbox{
+	position: absolute;
+	top:calc(50% - 200px);
+	left:calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: 5px solid lightblue;
+	border-radius: 5%;
+	text-align: center;
+}
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+Change the background-color, 0.5 here is opacity value, 
+try to change it between 0.1 and 0.9.
+```css [7]
+.quizbox{
+	position: absolute;
+	top:calc(50% - 200px);
+	left:calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: 5px solid lightblue;
+	border-radius: 5%;
+	text-align: center;
+}
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+Change the border short hand values. 
+Try for example "1px dotted pink". 
+```css [8]
+.quizbox{
+	position: absolute;
+	top:calc(50% - 200px);
+	left:calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: 5px solid lightblue;
+	border-radius: 5%;
+	text-align: center;
+}
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+Change also the border-radius, try some value between 1-100%.
+```css [9]
+.quizbox{
+	position: absolute;
+	top:calc(50% - 200px);
+	left:calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: 5px solid lightblue;
+	border-radius: 5%;
+	text-align: center;
+}
+```  
+</textarea
+          >
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+The last row in the example is to center the text inside of the div. 
+You can try change the value to left or right, but it won't look good in this case.
+```css [10]
+.quizbox{
+	position: absolute;
+	top:calc(50% - 200px);
+	left:calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: 5px solid lightblue;
+	border-radius: 5%;
+	text-align: center;
+}
+```  
+</textarea
+          >
+        </section>
+
+        <section>
+          <p>Home assignment:</p>
+          <ul>
+            <li>Upload a background image to use for your game.</li>
+            <li>Try put your own background image on the body tag.</li>
+            <li>
+              You can maybe guess which line is correct from this
+              <a
+                href="https://github.com/Linenmyron/quiz/blob/main/css/stylesheet.css"
+                >code example</a
+              >.
+            </li>
+            <li>
+              Create at least 5 questions with one correct and two incorrect
+              answers to use in your game
+            </li>
+            <li>
+              If you have time also try find some nice sound for your game, mp3
+              files will work fine.
+              <a href="https://github.com/Linenmyron/quiz/tree/main/audio"
+                >Some sound examples</a
+              >.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>CoderDojo</h1>
+          <h2>JavaScript</h2>
+          <p>On 29.11.2021 we will start with some JavaScript for our game.</p>
         </section>
       </div>
     </div>
@@ -241,6 +527,7 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
+        slideNumber: "c/t",
         hash: true,
 
         // Learn about plugins: https://revealjs.com/plugins/
