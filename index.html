@@ -487,7 +487,8 @@ You can try change the value to left or right, but it won't look good in this ca
 	text-align: center;
 }
 ```  
-</textarea>
+</textarea
+          >
         </section>
 
         <section>
@@ -530,12 +531,98 @@ You can try change the value to left or right, but it won't look good in this ca
         </section>
 
         <section>
-            <h1>JavaScript</h1>
-            <p>The function behind everything</p>
-            <p>or</p>
-            <p>The Wizard</p>
-        </section>  
-    
+          <h1>class and id explained</h1>
+          <p>In the previous lesson we mentioned class and how we used it to style the quizbox div. We also so a couple of examples where id was used on the quizbox game.</p>
+        </section>
+
+
+        <section>
+          <p>ID’s are unique
+            <ul>
+              <li>
+                Each element can have only one ID
+              </li>
+              <li>
+                Each page shall have only one element with that ID
+              </li>
+            </ul>
+          </p>
+        </section>
+
+        <section>
+          <p>Classes are not unique
+            <ul>
+              <li>
+                You can use the same class on multiple elements.
+              </li>
+              <li>
+                You can use multiple classes on the same element.
+              </li>
+            </ul>
+          </p>
+          <p></p>
+        </section>
+
+        <section data-markdown>
+        <textarea data-template>
+        If you would have wrote this, what would be the outcome?
+
+        HTML
+        ```html [1]
+        <h1 class="blue" id="red">Blue text</h1>
+        ```
+
+        CSS
+        ```css [1|2]
+        #red { color: red; }
+        .blue { color: blue; }
+        ```
+        </textarea>
+        </section>
+
+        <section>
+          <p>Correct answer is that the text would show as red because ID's are more specific than classes and take precedence over the id.</p>
+        </section>
+
+        <section data-markdown>
+        <textarea data-template>
+        Any styling information that needs to be applied to multiple objects on a page should be done with a class. 
+        Take for example a our quizbox page has multiple “questions”:
+        ```html [1-3]
+        <p class="question"></p>
+        <p class="question"></p>
+        <p class="question"></p>
+        ```
+        ---
+        You can apply more than one class:
+
+        ```html [1|2|3]
+        <p class="question"></p>
+        <p class="question green"></p>
+        <p class="question green big"></p>
+        ```
+        These classes are space-delimited and most browsers support any number of them (actually, it’s more like thousands, but way more than you’ll ever need). 
+        </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            There is nothing stopping you from having both an ID and a Class on a single element.
+             In fact, it is often a very good idea.
+            ```html [1|2|3]
+            <p id="question-1" class="question"></p>
+            <p id="question-2" class="question"></p>
+            ```
+          </textarea>
+        </section>
+
+        <section>
+          <h1>JavaScript</h1>
+          <p>The function behind everything</p>
+          <p>or</p>
+          <p>The Wizard</p>
+        </section>
+
         <section data-markdown>
           <textarea data-template>
             For the HTML to be able to use JavaScript we to have to add in this following code line in the
@@ -557,9 +644,9 @@ You can try change the value to left or right, but it won't look good in this ca
             So in your index.html, it should look something like this
             ```
             <head>
-              <meta charset = "UTF-8">
+              <meta charset="UTF-8">
               <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-              <script src= "js/script.js"></script>
+              <script src="js/script.js"></script>
               <title>Portfolio</title>
             </head>
             ```
@@ -567,35 +654,33 @@ You can try change the value to left or right, but it won't look good in this ca
         </section>
 
         <section>
-        <h1>Method</h1>
-        <p>The action that perform on the HTML elements</p><br>
+          <h1>Method</h1>
+          <p>The action that perform on the HTML elements</p>
+          <br />
         </section>
         <section>
-          <p>
-              Methods:
-            </p>
-            <ul>
-              <li>getElementById</li>
-              <li>getElementsByClassName</li>
-              <li>addEventListener</li>
-              <li>play & pause</li>
-            </ul>
-          </section>
+          <p>Methods:</p>
+          <ul>
+            <li>getElementById</li>
+            <li>getElementsByClassName</li>
+            <li>addEventListener</li>
+            <li>play & pause</li>
+          </ul>
+        </section>
         <section>
-        <h1>Properties</h1>
-        <p>The values of the HTML elements, that you can set or change</p> <br>
+          <h1>Properties</h1>
+          <p>The values of the HTML elements, that you can set or change</p>
+          <br />
         </section>
 
         <section>
-          <p>
-              Propertis:
-            </p>
-            <ul>
-              <li>innerHTML</li>
-              <li>style</li>
-              <li>src (source) </li>
-            </ul>
-          </section>
+          <p>Propertis:</p>
+          <ul>
+            <li>innerHTML</li>
+            <li>style</li>
+            <li>src (source)</li>
+          </ul>
+        </section>
         <section data-markdown>
           <textarea data-template>
             ## 
@@ -660,10 +745,14 @@ You can try change the value to left or right, but it won't look good in this ca
             </code></pre>
           </textarea>
         </section>
-        
+
         <section>
-          <p>Remember to add semicolon ( ; ) at the end of the property to close the function
+          <p>
+            Remember to add semicolon ( ; ) at the end of the property to close
+            the function
+          </p>
         </section>
+
         <section data-markdown>
           <textarea data-template>
             ## Debugging
@@ -680,7 +769,8 @@ You can try change the value to left or right, but it won't look good in this ca
             ---
             ##
             How it will look like on the browser
-            <img src="https://i.ytimg.com/vi/RcwrSBvJOaw/maxresdefault.jpg">
+            <img src="img/maxresdefault.jpeg">
+            
             ---
             ## alert();
             The alert() method displays an alert box with a specified message and an OK button.
@@ -690,10 +780,11 @@ You can try change the value to left or right, but it won't look good in this ca
                   alert("Alert box");
               });
             </code></pre>
+            
             ---
             Example how it will look on webbrowser 
-            <img src="http://www.toolinfy.com/imgs/alert_browser.png">
-          </textarea>      
+            <img src="img/alert_browser.png">
+          </textarea>
         </section>
       </div>
     </div>
