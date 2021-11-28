@@ -36,6 +36,10 @@
               Online editors example
               <a href="https://codepen.io/pen">CodePen</a>
             </li>
+            <li>
+              Discord link:
+              <a href="https://discord.gg/JsCyVzbakW">Coder Dojo discord</a>
+            </li>
           </ul>
         </section>
 
@@ -483,8 +487,7 @@ You can try change the value to left or right, but it won't look good in this ca
 	text-align: center;
 }
 ```  
-</textarea
-          >
+</textarea>
         </section>
 
         <section>
@@ -523,7 +526,162 @@ You can try change the value to left or right, but it won't look good in this ca
         <section>
           <h1>CoderDojo</h1>
           <h2>JavaScript</h2>
-          <p>On 29.11.2021 we will start with some JavaScript for our game.</p>
+          <p>29.11.2021</p>
+        </section>
+
+        <section>
+            <h1>JavaScript</h1>
+            <p>The function behind everything</p>
+            <p>or</p>
+            <p>The Wizard</p>
+        </section>  
+    
+        <section data-markdown>
+          <textarea data-template>
+            For the HTML to be able to use JavaScript we to have to add in this following code line in the
+            ```
+            <head></head>
+            ```
+             section in index.html
+            ```
+            <script src="js/script.js"></script>   
+            ```
+            or 
+            ```
+            <script src="javascript.js"></script>   
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            So in your index.html, it should look something like this
+            ```
+            <head>
+              <meta charset = "UTF-8">
+              <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+              <script src= "js/script.js"></script>
+              <title>Portfolio</title>
+            </head>
+            ```
+          </textarea>
+        </section>
+
+        <section>
+        <h1>Method</h1>
+        <p>The action that perform on the HTML elements</p><br>
+        </section>
+        <section>
+          <p>
+              Methods:
+            </p>
+            <ul>
+              <li>getElementById</li>
+              <li>getElementsByClassName</li>
+              <li>addEventListener</li>
+              <li>play & pause</li>
+            </ul>
+          </section>
+        <section>
+        <h1>Properties</h1>
+        <p>The values of the HTML elements, that you can set or change</p> <br>
+        </section>
+
+        <section>
+          <p>
+              Propertis:
+            </p>
+            <ul>
+              <li>innerHTML</li>
+              <li>style</li>
+              <li>src (source) </li>
+            </ul>
+          </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 
+            To use method and propertis 
+            We have to get access to HTML document object by using: `document`<br>
+            and after document we can find HTML elements by method
+            ---
+            ##
+            Example how to get HTML Element based on Id
+            <pre><code data-trim data-noescape> 
+              document.getElementById("question");
+            </code></pre>
+            or get elements by classname
+            <pre><code data-trim data-noescape> 
+              document.getElementsByClassName("Class name");
+            </code></pre>
+            ---
+            ## 
+            To use the innerHTML property, to give Id element a new value
+            <pre><code data-trim data-noescape> 
+              document.getElementById("question").innerHTML = "The new value";
+            </code></pre>
+            or give class a new style to show or hide
+            <pre><code data-trim data-noescape> 
+              document.getElementById("gamebox").style.display = "none";
+            </code></pre>
+            <pre><code data-trim data-noescape> 
+              document.getElementById("gamebox").style.display = "block";
+            </code></pre>
+            or give a new color class
+            <pre><code data-trim data-noescape> 
+              document.getElementsByClassName("myP2").style.color = "blue";
+            </code></pre>
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Event Listener
+            Event listener will fire on mouse click or keystroke and execute a function
+            on specific elements
+            ---
+            ## 
+            Event listener that will fires when user clicks on a button
+            <pre><code data-trim data-noescape> 
+              document.getElementById('minAlert').addEventListener('click', function () {
+                /*
+                *  Function to do on button click i.e 
+                *   alert("hello");
+                */
+              }); 
+            </code></pre>
+            ---
+            ##
+            Another way is to split out the function 
+            <pre><code data-trim data-noescape> 
+              function activateFunction() {
+                alert("hello");
+              }
+
+              document.getElementById('minAlert').addEventListener('click', activateFunction()); 
+            </code></pre>
+          </textarea>
+        </section>
+        
+        <section>
+          <p>Remember to add semicolon ( ; ) at the end of the property to close the function
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Debugging
+            Inside the function in can be good to add console.log('some text")'); or alert("some text here too"); 
+            inside a function to see if the function will be called
+            ---
+            ## console.log();
+            To see console.log, you have the devtools open and add console.log inside a function
+            <pre><code data-trim data-noescape>
+              document.addEventListener("DOMContentLoaded", function() {
+                  console.log("DOM has been loaded");
+              });
+            </code></pre>
+            ---
+            ##
+            How it will look like on the browser
+            <img src="https://i.ytimg.com/vi/RcwrSBvJOaw/maxresdefault.jpg">
+          </textarea>      
         </section>
       </div>
     </div>
