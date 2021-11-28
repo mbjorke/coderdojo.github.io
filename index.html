@@ -532,39 +532,31 @@ You can try change the value to left or right, but it won't look good in this ca
 
         <section>
           <h1>class and id explained</h1>
-          <p>In the previous lesson we mentioned class and how we used it to style the quizbox div. We also so a couple of examples where id was used on the quizbox game.</p>
-        </section>
-
-
-        <section>
-          <p>ID’s are unique
-            <ul>
-              <li>
-                Each element can have only one ID
-              </li>
-              <li>
-                Each page shall have only one element with that ID
-              </li>
-            </ul>
+          <p>
+            In the previous lesson we mentioned class and how we used it to
+            style the quizbox div. We also so a couple of examples where id was
+            used on the quizbox game.
           </p>
         </section>
 
         <section>
-          <p>Classes are not unique
-            <ul>
-              <li>
-                You can use the same class on multiple elements.
-              </li>
-              <li>
-                You can use multiple classes on the same element.
-              </li>
-            </ul>
-          </p>
-          <p></p>
+          <h1>ID’s are unique</h1>
+          <ul>
+            <li>Each element can have only one ID</li>
+            <li>Each page shall have only one element with that ID</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Classes are not unique</h1>
+          <ul>
+            <li>You can use the same class on multiple elements.</li>
+            <li>You can use multiple classes on the same element.</li>
+          </ul>
         </section>
 
         <section data-markdown>
-        <textarea data-template>
+          <textarea data-template>
         If you would have wrote this, what would be the outcome?
 
         HTML
@@ -577,15 +569,19 @@ You can try change the value to left or right, but it won't look good in this ca
         #red { color: red; }
         .blue { color: blue; }
         ```
-        </textarea>
+        </textarea
+          >
         </section>
 
         <section>
-          <p>Correct answer is that the text would show as red because ID's are more specific than classes and take precedence over the id.</p>
+          <p>
+            Correct answer is that the text would show as red because ID's are
+            more specific than classes and take precedence over the id.
+          </p>
         </section>
 
         <section data-markdown>
-        <textarea data-template>
+          <textarea data-template>
         Any styling information that needs to be applied to multiple objects on a page should be done with a class. 
         Take for example a our quizbox page has multiple “questions”:
         ```html [1-3]
@@ -602,7 +598,8 @@ You can try change the value to left or right, but it won't look good in this ca
         <p class="question green big"></p>
         ```
         These classes are space-delimited and most browsers support any number of them (actually, it’s more like thousands, but way more than you’ll ever need). 
-        </textarea>
+        </textarea
+          >
         </section>
 
         <section data-markdown>
