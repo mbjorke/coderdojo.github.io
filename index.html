@@ -788,6 +788,21 @@ You can try change the value to left or right, but it won't look good in this ca
           <h1>Continue with JavaScript</h1>
           <p>17.01.2022</p>
         </section>
+        <section data-markdown>
+          <textarea data-template>
+          In HTML tags, you can add inline JavaScript functions.
+          e.i. onClick on button
+            ```html [1]
+              <button onclick="answer(1);">Jakobstad</button>
+            ```  
+            ```javaScript[1]
+            //JavaScript function that is connected to button onClick
+            function answer(answer_nr){
+              //fucntion logic goes here
+            }
+            ```
+            </textarea>
+        </section>
         <section>
           In JavaScript you can store value from input field or generate own value that can display for the user later on. 
           Just like in our Quiz game score.<br>
@@ -956,13 +971,15 @@ You can try change the value to left or right, but it won't look good in this ca
           <p>Home assignment:</p>
           <ul>
             <li>
-             To refactoring the code and upload it either here on discord:
+             To refactoring the code 
+            </li>
+            <li> 
+              Upload on discord:
               <a
                 href="https://discord.com/channels/899692978984062986/911644078121287740"
                 >#hemuppgifter</a
               >
               channel.
-              or show your code next time
             </li>
           </ul>
         </section>
@@ -970,13 +987,14 @@ You can try change the value to left or right, but it won't look good in this ca
           <p>Criteria:</p>
           <ul>
             <li>
-              Should be able to go to next question when answering, either wrong or correct answer
+              Should be able to go to next question when answering, either wrong or correct
             </li>
             <li>
               should be able to show the score at the end of the game
             </li>
             <li>Update the score if answering wrong or right, if wrong withdraw some points and correct add score
               the score can not be below than 0 points </li>
+              <li>Remove inline JavaScript from HTML and use addEventListener instead</li>
             <li>
               Restart the game
             </li>
