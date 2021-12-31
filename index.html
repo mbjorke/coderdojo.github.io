@@ -772,16 +772,241 @@ You can try change the value to left or right, but it won't look good in this ca
             ## alert();
             The alert() method displays an alert box with a specified message and an OK button.
             And alert() shall also be added inside a function
-            <pre><code data-trim data-noescape>
-              document.addEventListener("DOMContentLoaded", function() {
-                  alert("Alert box");
-              });
-            </code></pre>
-            
+            <pre>
+              <code data-trim data-noescape>
+                document.addEventListener("DOMContentLoaded", function() {
+                    alert("Alert box");
+                });
+              </code>
+            </pre>
             ---
             Example how it will look on webbrowser 
             <img src="img/alert_browser.png">
           </textarea>
+        </section>
+        <section>
+          <h1>Continue with JavaScript</h1>
+          <p>17.01.2022</p>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          In HTML tags, you can add inline JavaScript functions.
+          e.i. onClick on button
+            ```html [1]
+              <button onclick="answer(1);">Jakobstad</button>
+            ```  
+            ```javaScript[1]
+            //JavaScript function that is connected to button onClick
+            function answer(answer_nr){
+              //fucntion logic goes here
+            }
+            ```
+            </textarea>
+        </section>
+        <section>
+          In JavaScript you can store value from input field or generate own value that can display for the user later on. 
+          Just like in our Quiz game score.<br>
+          <img src="img/score_board.png">
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Variables
+            Variables are containers for storing data (storing data values).
+            In this example, x, y, and z, are variables, declared with the var keyword: 
+            <ul>
+              <li>using var</li>
+              <li>using let</li>
+              <li>using const</li>
+              <li>using nothing</li>
+            </ul>
+            
+            ---
+            ## Var variable
+            Var is a short word for variable.
+            <pre>
+              To initializ a variable:
+              <code data-trim data-noescape>
+                var x = 5;
+                var y = 6;
+                var z = x + y;
+              </code>
+            </pre>
+            ---
+            ##  Var Variable
+            Backdraw with var:
+            <ul>
+              <li>Same variable name can be initializ many times.</li>
+              <li>But the last initialized variable name will have that value</li>
+            </ul>
+            <img src="img/var_variable.png" width="50%" height="auto">
+            ---
+            ## Let variable
+            Let variable comes from english word letting.<br>
+            The let statement declares a block scope local variable, optionally initializing it to a value.<br>
+            <pre><code data-trim data-noescape>
+              function varTest() {
+                var x = 1;
+                if (true) {
+                var x = 2; // same variable!
+                console.log(x); // 2
+                }
+                console.log(x); // 2
+               }
+               
+               function letTest() {
+                let x = 1;
+                if (true) {
+                let x = 2; // different variable
+                console.log(x); // 2
+                }
+                console.log(x); // 1
+               }
+            </code></pre>
+            ---
+            ## Const variable
+            Variables defined with const cannot be Redeclared.
+            Variables defined with const cannot be Reassigned.
+            Variables defined with const have Block Scope.
+            <pre>
+              <code>
+                const PI = 3.141592653589793;
+                PI = 3.14;      // This will give an error
+                PI = PI + 10;   // This will also give an error 
+              </code>
+            </pre>
+            ---
+            ## Const Variable
+            const variables must be assigned a value when they are declared:
+            <pre>
+              Correct:
+              <code>
+                const PI = 3.14159265359;
+              </code>
+            </pre>
+            <pre>
+              Incorrect:
+              <code>
+                const PI;
+                PI = 3.14159265359;
+              </code>
+            </pre>
+            ---
+            ## Const Variable
+            As a general rule, always declare a variable with const unless you know that the value will change.
+
+            Use const when you declare:
+              <ul>
+                <li>A new Array</li>
+                <li>A new Object</li>
+                <li>A new Function</li>
+                <li>A new RegExp</li>
+              </ul>
+            ---
+            <h1>Arrays</h1>
+            <p>Generally, a collection of same type data items that can be selected by indices computed at run-time, including:</p>
+            <ul>
+              <li>Array data structure, an arrangement of items at equally spaced addresses in computer memory</li>
+              <li>Array data type, used in a programming language to specify a variable that can be indexed</li>
+            </ul>
+          </textarea>
+        </section>
+        <section>
+          <h3>How to create an Array</h3>
+          <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+          <p>Syntax:</p>
+          <pre>
+            <code>
+              const array_name = [item1, item2, ...];   
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Iterat an Array</h3>
+          <p>To iterat an Array, we can use either for loop, forEach methods or manually add position index </p>
+          <p>But we have to know that an Array starts always from position 0</p>
+          <p>To get lenght of an Array, we have to use length method, by adding end of the array
+          <pre>
+            <code>
+              const test_array = ['Iterate','this','Array'];
+              test_array.lenght // test_array length is 3
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Looping through an Array</h3>
+          <pre>
+            For Loop method
+            <code>
+              const test_array = ['Iterate','this','Array'];
+              
+              for (let i = 0; i < test_array.length; i++) {
+                console.log(test_array[i]);
+              }
+            </code>
+          </pre>
+          <pre>
+            ForEach method
+            <code>
+              const test_array = ['Iterate','this','Array'];
+          
+              test_array.forEach(function(value) {
+                console.log(value);
+              });
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Manually get data from an Array</h3>
+          <p>There is possible to manually get data without loop the array through</p>
+          <p>But should only use if you know that the value wont change and you will use same data over and ove again</p>
+          <pre>
+            Manually get data from the Array
+            <code>
+              const test_array = ['Iterate','this','Array'];
+              console.log(test_array[1]);
+            </code>
+          </pre>
+        </section>
+        <section>
+          <p>Home assignment:</p>
+          <ul>
+            <li>
+             To refactoring the code 
+            </li>
+            <li> 
+              Upload on discord:
+              <a
+                href="https://discord.com/channels/899692978984062986/911644078121287740"
+                >#hemuppgifter</a
+              >
+              channel.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>Criteria:</p>
+          <ul>
+            <li>
+              Should be able to go to next question when answering, wrong or correct answer
+            </li>
+            <li>
+              should be able to show the score at the end of the game
+            </li>
+            <li>Update the score if answering wrong or right, if wrong withdraw some points and correct add score
+              the score can not be below than 0 points </li>
+              <li>Remove inline JavaScript from HTML and use addEventListener instead</li>
+            <li>
+              Restart the game
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>Nice to have:</p>
+          <ul>
+            <li>Reset the score when restarting the game</li>
+            <li>play sounds both when answering the question and at the end of the game</li>
+            <li>Show how many question that user have answer and total of question (e.i. 2 / 15)</li>
+          </ul>
         </section>
       </div>
     </div>
