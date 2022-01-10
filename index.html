@@ -968,6 +968,90 @@ You can try change the value to left or right, but it won't look good in this ca
           </pre>
         </section>
         <section>
+          <h3>If, else if and else</h3>
+          <p>The if/else statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions.</p>
+        </section>
+        <section>
+          <p>In JavaScript we have the following conditional statements:</p>
+          <ul>
+            <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+            <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+            <li>Use else if to specify a new condition to test, if the first condition is false</li>
+            <li>Use switch to select one of many blocks of code to be executed</li>
+          </ul>
+        </section>
+        <section>
+          <pre>
+            if statement
+            <code>
+              if (condition) {
+                // block of code to be executed
+                // if the condition is true
+              }
+            </code>
+          </pre>
+          <pre>
+            if / else statements
+            <code>
+              if (condition) {
+                // block of code to be executed
+                // if the condition is true
+              } else {
+                // block of code to be executed 
+                // if the condition is false
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <pre>
+            if, else if and else statements
+            <code>
+              if (condition1) {
+                // block of code to be executed 
+                // if condition1 is true
+              } else if (condition2) {
+                // block of code to be executed 
+                // if the condition1 is false and 
+                // condition2 is true
+              } else {
+                // block of code to be executed 
+                // if the condition1 is false and 
+                // condition2 is false
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Example with if statements</h3>
+          <pre>
+            If statement for time
+            <code>
+              var time = new Date().getHours();
+              if (time < 10) {
+                greeting = "Good morning";
+              } else if (time < 20) {
+                greeting = "Good day";
+              } else {
+                greeting = "Good evening";
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>More example with if statements</h3>
+          <pre>
+            If statement to change font size
+            <code>
+              var x = document.getElementsByTagName("DIV")[0];
+
+              if (x.id === "myDIV") {
+                x.style.fontSize = "30px";
+              } 
+            </code>
+          </pre>
+        </section>
+        <section>
           <p>Home assignment:</p>
           <ul>
             <li>
